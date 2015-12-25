@@ -19,7 +19,7 @@ div.container.A7 {
   page: landscape;
 }
 
-.description {
+.description, .higherLevel .value {
   font-size: 8pt;
   line-height: 1;
   font-family: Didot, Times New Roman, Times, serif;

@@ -80,7 +80,7 @@
       <name>Heiltrank</name>
       <cite>DMH 187</cite>
       <type>potion</type>
-      <rarity>varied</rarity>
+      <rarity>common</rarity>
       <requiresAttunement>no</requiresAttunement>
       <description>
         Healing , common, 2d4 + 2<br/>
@@ -162,7 +162,7 @@
     <item>
       <name>Speer des Blitzes</name>
       <cite>DMH 178</cite>
-      <type>Weapon (javlin)</type>
+      <type>Weapon</type>
       <rarity>uncommon</rarity>
       <requiresAttunement>no</requiresAttunement>
       <description>
@@ -174,24 +174,26 @@
     <item>
       <name>Wand of Fear</name>
       <cite>DMH 210</cite>
-      <type></type>
-      <rarity></rarity>
+      <type>Wand</type>
+      <rarity>rare</rarity>
+      <requiresAttunement>yes</requiresAttunement>
       <description>
       </description>
     </item>
     <item>
-      <name>Wand of the War Mage</name>
+      <name>Wand of the War Mage +1</name>
       <cite>DMH 212</cite>
-      <type></type>
-      <rarity></rarity>
+      <type>Wand</type>
+      <rarity>uncommon</rarity>
+      <requiresAttunement>yes</requiresAttunement>
       <description>
       </description>
     </item>
     <item>
       <name>Perle der Macht</name>
       <cite>DMH 184</cite>
-      <type></type>
-      <rarity></rarity>
+      <type>Wondrous item</type>
+      <rarity>uncommon</rarity>
       <requiresAttunement>yes</requiresAttunement> <!-- by spellcaster -->
       <description>
         Mit einer Aktion und dem Losungswort kannst du einen Spruchplatz von Level 3 oder tiefer zurückgewinnen.<br/>
@@ -208,6 +210,7 @@
         Deine Konstitution ist 19 solange du dieses Amulet trägst. Es hat keinen Effekt, falls deine Konstitution bereits 19 oder höher ist.
       </description>
     </item>
+    <!--
     <item>
       <name></name>
       <type></type>
@@ -215,5 +218,6 @@
       <description>
       </description>
     </item>
+  -->
   </items>
 </cards>

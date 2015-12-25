@@ -103,7 +103,7 @@
 
   <xsl:template match="description | shortDescription">
     <div class="description">
-      <xsl:copy-of disable-output-escaping="yes" select="*|text()"/>
+      <xsl:copy-of disable-output-escaping="yes" select="*|text()" />
     </div>
   </xsl:template>
 

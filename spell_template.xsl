@@ -18,7 +18,17 @@
       <xsl:apply-templates select="range"/>
       <xsl:apply-templates select="components"/>
       <xsl:apply-templates select="duration"/>
-      <xsl:apply-templates select="shortDescription"/>
+      <xsl:choose>
+        <xsl:when test="normalize-space(shortDescription[text()]) != ''">
+          <xsl:apply-templates select="shortDescription"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="description"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:if test="normalize-space(atHigherLevel[text()]) != ''">
+      <xsl:apply-templates select="atHigherLevel"/>
+      </xsl:if>
     </div>
   </xsl:template>
 
@@ -69,5 +79,11 @@
     </div>
   </xsl:template>
 
+  <xsl:template match="atHigherLevel">
+    <div class="higherLevel">
+      <div class="title">At higher level</div>
+      <div class="value"><xsl:value-of select="." /></div>
+    </div>
+  </xsl:stylesheet>
   
 </xsl:stylesheet>

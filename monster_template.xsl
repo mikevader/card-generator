@@ -94,10 +94,10 @@
       <div class="title">Saving throws</div>
       <xsl:for-each select="@*">
         <xsl:variable name="attName" select="name()" />
-        <xsl:variable name="modifier" select="floor((../preceding-sibling::abilities/@*[name()=$attName] - 10) div 2)" />
+        <xsl:variable name="modifier" select="floor((../preceding-sibling::abilities/@*[name()=$attName] - 10) div 2) + $pb" />
         <div class="ability">
           <div class="title"><xsl:value-of select="name()"/></div>
-          <div class="value">+<xsl:value-of select="$modifier + $pb"/></div>
+          <div class="value">+<xsl:value-of select="$modifier"/></div>
         </div>
       </xsl:for-each>
       <span class="stretch"></span>
@@ -138,10 +138,15 @@
         <xsl:otherwise><xsl:value-of select="@att"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="modifier" select="floor((../preceding-sibling::abilities/@*[name()=$attName] - 10) div 2)" />
+    <xsl:variable name="modifier">
+      <xsl:choose>
+        <xsl:when test="current() = ''"><xsl:value-of select="floor((../preceding-sibling::abilities/@*[name()=$attName] - 10) div 2) + $pb" /></xsl:when>
+        <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <div class="listElement">
       <div class="title"><xsl:value-of select="@name"/></div>
-      <div class="value">+<xsl:value-of select="$modifier + $pb + ."/></div>
+      <div class="value">+<xsl:value-of select="$modifier"/></div>
     </div>
   </xsl:template>
 
