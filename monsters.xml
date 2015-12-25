@@ -8,6 +8,7 @@
       <reference>MM 155</reference>
 
       <stats>
+        <proficiency>2</proficiency>
         <size>huge</size>
         <ac>13 (natural armor)</ac>
         <hp>105 (10d12 + 40)</hp>
@@ -31,25 +32,47 @@
           <cold/>
         </dmgImmunity>
         <condImmunity>
-          <poisen/>
+          <poison/>
         </condImmunity>
         <senses>
           <sense name="passive Perception">13</sense>
         </senses>
+        <languages>Common, Goblin</languages>
         <cr>8 (3'900 XP)</cr>
       </stats>
 
+      <traits>
+        <trait id="fey_ancestry"/>
+        <trait name="Keen Smell">
+          The bear has advantage on Wisdom (Perception) checks that rely on smell.
+        </trait>
+      </traits>
       <actions>
-
-
+        <action name="Multiattack">
+          The drow makes two shortsword attacks.
+        </action>
+        <meleeWeaponAttack name="Shortsword">
+          +7 to hit, reach 5ft., one target. <i>Hit:</i> 7 (1d6 + 4) piercing damage + 10 (3d6) poison damage.
+        </meleeWeaponAttack>
+        <rangedWeaponAttack name="Hand Crossbow">
+          +7 to hit, range 30/120ft., one target. <i>Hit:</i> 7 (1d6 + 4) piercing damage. Target must success DC 13 Const save or be poisoned for 1h. If fails by 5 or more, target is also unconscious until takes dmg or wakend.
+        </rangedWeaponAttack>
+      </actions>
+      <actions title="Reactions" side="back">
+        <action name="Parry">
+          The drow adds 3 to its AC against one melee attack that would hit it. To do so, the drow must see the attacker and be wielding a melee weapon.
+        </action>
       </actions>
 
       <description>Special Chap ?? .... 111223456</description>
     </monster>
+  -->
+
     <monster>
       <name>Goblin</name>
       <type>Goblin</type>
       <stats>
+        <proficiency>2</proficiency>
         <size>huge</size>
         <ac>13 (natural armor)</ac>
         <hp>105 (10d12 + 40)</hp>
@@ -58,7 +81,7 @@
         </speed>
         <abilities str="8 (-1)" dex="14 (+2)" con="10 (+0)" int="10 (+0)" wis="8 (-1)" cha="8 (-1)"/>
         <skills>
-          <skill name="Stealth">+6</skill>
+          <skill name="Stealth"></skill>
         </skills>
         <senses>
           <sense name="darkvision">60 ft</sense>
@@ -84,7 +107,257 @@
         Goblins are small, black-hearted humanoids that lair in despoiled dungeons and other dismal settings. Individually weak, they gather in large numbers to torment other creatures.
       </description>
     </monster>
-  -->
+
+    <monster>
+      <cite>MM 34</cite>
+      <name>Bulette</name>
+      <type>Monstrosity</type>
+      <stats>
+        <proficiency>3</proficiency>
+        <size>Large</size>
+        <ac>17 (natural armor)</ac>
+        <hp>94 (9d10 + 45)</hp>
+        <speed>
+          40 ft. (burrow 40 ft)
+        </speed>
+        <abilities str="19" dex="11" con="21" int="2" wis="10" cha="5"/>
+        <skills>
+          <skill name="Perception"></skill>
+        </skills>
+        <senses>
+          <sense name="darkvision">60 ft</sense>
+          <sense name="tremorsense">60 ft</sense>
+        </senses>
+        <languages>-</languages>
+        <cr>5 (1'800 XP)</cr>
+      </stats>
+      <traits>
+        <trait name="Standing Leap">
+          The bulette's long jump is up to 30 ft and its high jump is up to 15 feet, with or without a running start.
+        </trait>
+      </traits>
+      <actions>
+        <action name="Mehrfachattacke">
+          Entweder zwei Nachattacken, zwei Fernattacken oder ein Erdrücken
+        </action>
+        <meleeWeaponAttack name="Bite">
+          +7 to hit, reach 5ft., one target. <i>Hit:</i> 30 (4d12 + 4) piercing damage.
+        </meleeWeaponAttack>
+        <action name="Deadly Leap">
+          If the bulette jumps at least 15 feet as parto of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Streanth or Dexterity saving throw (target's choise) or be knoched prone and take 14 (3d6 + 4) bludgeoning damage plus 14 (3d6 + 4) slashing damage. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creatures choise.
+        </action>
+      </actions>
+      <description>
+
+      </description>
+    </monster>
+
+    <monster>
+      <cite>MM 122</cite>
+      <name>Duergar/Brobim</name>
+      <type>Humanoid (dwarf)</type>
+      <stats>
+        <proficiency>2</proficiency>
+        <size>Medium</size>
+        <ac>16 (scale mail, shield)</ac>
+        <hp>26 (4d8 + 8)</hp>
+        <speed>
+          25 ft.
+        </speed>
+        <abilities str="14" dex="11" con="14" int="11" wis="10" cha="9"/>
+        <dmgResistance>
+          <poison/>
+        </dmgResistance>
+        <senses>
+          <sense name="darkvision">120 ft</sense>
+        </senses>
+        <languages>Dwarvish/Rogolan, Undercommon</languages>
+        <cr>1 (200 XP)</cr>
+      </stats>
+      <traits>
+        <trait name="Duergar Resilience">
+          The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.
+        </trait>
+        <trait name="Sunlight Sensitivity">
+          While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+        </trait>
+      </traits>
+      <actions>
+        <action name="Enlarge (1/SR)">
+          Size +1, doubles damge dice, Adv. on Strengh checks and saves.
+        </action>
+        <meleeWeaponAttack name="War Pick">
+          +4 to hit, reach 5ft., one target. <i>Hit:</i> 6 (1d8 + 2) piercing damage/ 11 (2d8 + 2)
+        </meleeWeaponAttack>
+        <rangedWeaponAttack name="Javelin">
+          +4 to hit, range 30/120ft., one target. <i>Hit:</i> 5 (1d6 + 2) piercing damage / 9 (2d6 + 2).
+        </rangedWeaponAttack>
+        <action name="Invisibility (1/SR)">
+          The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.
+        </action>
+      </actions>
+      <description>
+
+      </description>
+    </monster>
+
+
+    <monster>
+      <cite>MM 128</cite>
+      <name>Drow</name>
+      <type>Humanoid (elf)</type>
+      <stats>
+        <proficiency>2</proficiency>
+        <size>Medium</size>
+        <ac>15 (chain shirt)</ac>
+        <hp>13 (3d8)</hp>
+        <speed>
+          30 ft.
+        </speed>
+        <abilities str="10" dex="14" con="10" int="11" wis="11" cha="12"/>
+        <skills>
+          <skill name="Perception"></skill>
+          <skill name="Stealth"></skill>
+        </skills>
+        <senses>
+          <sense name="darkvision">120 ft</sense>
+        </senses>
+        <languages>Elvish, Undercommon</languages>
+        <cr>1/4 (50 XP)</cr>
+      </stats>
+      <traits>
+        <trait id="fey_ancestry">
+          The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.
+        </trait>
+        <trait name="Innate Spellcasting">
+          The drew's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components: At will: dancing lights, 1/day each: darkness, faerie fire.
+        </trait>
+        <trait name="Sunlight Sensitivity">
+          While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+        </trait>
+      </traits>
+      <actions>
+        <meleeWeaponAttack name="Shortsword">
+          +4 to hit, reach 5ft., one target. <i>Hit:</i> 5 (1d6 + 2) piercing damage.
+        </meleeWeaponAttack>
+        <rangedWeaponAttack name="Hand Crossbow">
+          +4 to hit, range 30/120ft., one target. <i>Hit:</i> 5 (1d6 + 2) piercing damage. Target must success DC 13 Const save or be poisoned for 1h. If fails by 5 or more, target is also unconscious until takes dmg or wakend.
+        </rangedWeaponAttack>
+      </actions>
+      <description>
+
+      </description>
+    </monster>
+
+
+    <monster>
+      <cite>MM 128</cite>
+      <name>Drow Elite Warrior</name>
+      <type>Humanoid (elf)</type>
+      <stats>
+        <proficiency>3</proficiency>
+        <size>Medium</size>
+        <ac>18 (studded leather, shield)</ac>
+        <hp>71 (11d8 + 22)</hp>
+        <speed>
+          30 ft.
+        </speed>
+        <abilities str="13" dex="18" con="14" int="11" wis="13" cha="12"/>
+        <savingThrows dex="0" con="0" wis="0"/>
+        <skills>
+          <skill name="Perception"></skill>
+          <skill name="Stealth">10</skill>
+        </skills>
+        <senses>
+          <sense name="darkvision">120 ft</sense>
+        </senses>
+        <languages>Elvish, Undercommon</languages>
+        <cr>5 (1'800 XP)</cr>
+      </stats>
+      <traits>
+        <trait id="fey_ancestry">
+          The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.
+        </trait>
+        <trait name="Innate Spellcasting">
+          The drew's spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components: At will: dancing lights, 1/day each: darkness, faerie fire, levitate (self).
+        </trait>
+        <trait name="Sunlight Sensitivity">
+          While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+        </trait>
+      </traits>
+      <actions>
+        <action name="Multiattack">
+          The drow makes two shortsword attacks.
+        </action>
+        <meleeWeaponAttack name="Shortsword">
+          +7 to hit, reach 5ft., one target. <i>Hit:</i> 7 (1d6 + 4) piercing damage + 10 (3d6) poison damage.
+        </meleeWeaponAttack>
+        <rangedWeaponAttack name="Hand Crossbow">
+          +7 to hit, range 30/120ft., one target. <i>Hit:</i> 7 (1d6 + 4) piercing damage. Target must success DC 13 Const save or be poisoned for 1h. If fails by 5 or more, target is also unconscious until takes dmg or wakend.
+        </rangedWeaponAttack>
+      </actions>
+      <actions title="Reactions" side="back">
+        <action name="Parry">
+          The drow adds 3 to its AC against one melee attack that would hit it. To do so, the drow must see the attacker and be wielding a melee weapon.
+        </action>
+      </actions>
+      <description>
+
+      </description>
+    </monster>
+
+    <monster>
+      <cite>MM 129</cite>
+      <name>Drow Mage</name>
+      <type>Humanoid (elf)</type>
+      <stats>
+        <proficiency>3</proficiency>
+        <size>Medium</size>
+        <ac>12 (15 with mage armor)</ac>
+        <hp>45 (10d8)</hp>
+        <speed>
+          30 ft.
+        </speed>
+        <abilities str="9" dex="14" con="10" int="17" wis="13" cha="12"/>
+        <skills>
+          <skill name="Arcana">6</skill>
+          <skill name="Deception">5</skill>
+          <skill name="Perception">4</skill>
+          <skill name="Stealth">5</skill>
+        </skills>
+        <senses>
+          <sense name="darkvision">120 ft</sense>
+        </senses>
+        <languages>Elvish, Undercommon</languages>
+        <cr>7 (2'900 XP)</cr>
+      </stats>
+      <traits>
+        <trait id="fey_ancestry">
+          The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.
+        </trait>
+        <trait name="Innate Spellcasting">
+          The drew's spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components: At will: dancing lights, 1/day each: darkness, faerie fire, levitate (self).
+        </trait>
+        <trait name="Spellcasting">
+          The drow is a lOth-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with s pell attacks) . The drow has the following wizard s pells prepared:<br/>
+          Cantrips (at will): mage hand, minor illusion, poison spray, ray of frost<br/>
+          lst level (4 slots): mage armor, magic missile, shield, witch bolt<br/>
+          2nd level (3 slots): alter self, misty step, web<br/>
+          3rd level (3 slots): fly, lightning bolt<br/>
+          4th level (3 slots): Evard's black tentacles, greater invisibility<br/>
+          5th level (2 slots): cloudkill<br/>
+        </trait>
+      </traits>
+      <actions>
+        <meleeWeaponAttack name="Staff">
+          +2 to hit, reach 5ft., one target. <i>Hit:</i> 2 (1d6 - 1) bludgeoning damage + 3 (1d6) poison damage.
+        </meleeWeaponAttack>
+      </actions>
+      <description>
+
+      </description>
+    </monster>
+
 
     <monster>
       <name>Schlangenmensch</name>
@@ -99,17 +372,18 @@
         </speed>
         <abilities str="18" dex="16" con="13" int="8" wis="12" cha="14"/>
         <skills>
-          <skill name="Perception">0</skill>
-          <skill name="Stealth">0</skill>
+          <skill name="Perception"></skill>
+          <skill name="Stealth"></skill>
         </skills>
         <dmgResistance>
           <cold/>
+          <fire/>
         </dmgResistance>        
         <dmgImmunity>
-          <poisen/>
+          <poison/>
         </dmgImmunity>
         <condImmunity>
-          <poisened/>
+          <poisoned/>
         </condImmunity>
         <senses>
           <sense name="darkvision">60 ft</sense>
@@ -127,15 +401,15 @@
           Entweder zwei Nachattacken, zwei Fernattacken oder ein Erdrücken
         </action>
         <meleeWeaponAttack name="Biss">
-          +7 to hit, reach 5ft., one target. <i>Hit:</i> 1d6 + 4 piercing damage plus 3d6 poisen damage.
+          +7 to hit, reach 5ft., one target. <i>Hit:</i> 1d6 + 4 piercing damage plus 3d6 poison damage.
         </meleeWeaponAttack>
         <meleeWeaponAttack name="Erdrücken">
           +7 to hit, reach 10ft., one target. <i>Hit:</i> 2d6 + 4 bludgeoning damage, and the target is grappled (DC 14). Until this grapple ends, the target is restrained, and the Schlangenmensch kann kein weiteres Ziel erdrücken.</meleeWeaponAttack>
         <meleeWeaponAttack name="Krummschwert">
-          +7 to hit, reach 5ft., one target. <i>Hit:</i> 2d6 + 4 slashing damage plus 3d6 poisen damage.
+          +7 to hit, reach 5ft., one target. <i>Hit:</i> 2d6 + 4 slashing damage plus 3d6 poison damage.
         </meleeWeaponAttack>
         <rangedWeaponAttack name="Crossbow">
-          +6 to hit, range 150/600., one target. <i>Hit:</i> 2d8 + 3 piercing damage plus 3d6 poisen damage.
+          +6 to hit, range 150/600., one target. <i>Hit:</i> 2d8 + 3 piercing damage plus 3d6 poison damage.
         </rangedWeaponAttack>
       </actions>
       <description>
@@ -158,7 +432,7 @@
         <abilities str="19" dex="11" con="16" int="10" wis="12" cha="8"/>
         <savingThrows dex="0" con="0"/>
         <skills>
-          <skill name="Perception">0</skill>
+          <skill name="Perception"></skill>
         </skills>
         <dmgResistance>
           <necrotic/>
@@ -167,10 +441,10 @@
           <piercing/>
         </dmgResistance>        
         <dmgImmunity>
-          <poisen/>
+          <poison/>
         </dmgImmunity>
         <condImmunity>
-          <poisened/>
+          <poisoned/>
         </condImmunity>
         <senses>
           <sense name="darkvision">60 ft</sense>
@@ -212,8 +486,8 @@
         </speed>
         <abilities str="16" dex="19" con="14" int="10" wis="15" cha="11"/>
         <skills>
-          <skill name="Perception">0</skill>
-          <skill name="Stealth">0</skill>
+          <skill name="Perception"></skill>
+          <skill name="Stealth"></skill>
         </skills>
         <dmgResistance>
           <bludgeoning/>
@@ -221,13 +495,13 @@
           <slashing/>
         </dmgResistance>        
         <dmgImmunity>
-          <poisen/>
+          <poison/>
         </dmgImmunity>
         <condImmunity>
           <grappled/>
           <paralyzed/>
           <petrified/>
-          <poisened/>
+          <poisoned/>
           <prone/>
           <restrained/>
           <unconscious/>
@@ -266,28 +540,21 @@
     <monster>
       <name>Dahari</name>
       <type>Dämon</type>
-      <cite>MM 234</cite>
+      <cite>MM 241</cite>
       <stats>
         <proficiency>4</proficiency>
         <size>Large</size>
         <ac>14</ac>
-        <hp>104</hp>
+        <hp>200</hp>
         <speed>
-          fly 50 ft.
+          20 ft., climb 20 ft.
         </speed>
-        <abilities str="16" dex="5" con="16" int="1" wis="6" cha="1"/>
-        <skills>
-        </skills>
-        <dmgResistance>
-          <bludgeoning/>
-          <piercing/>
-          <slashing/>
-        </dmgResistance>        
+        <abilities str="20" dex="5" con="20" int="1" wis="6" cha="1"/>
         <dmgImmunity>
           <acid/>
           <cold/>
           <lightning/>
-          <poisen/>
+          <poison/>
           <slashing/>
         </dmgImmunity>
         <condImmunity>
@@ -306,18 +573,20 @@
       </stats>
       <traits>
         <trait id="amorphous" />
-        <trait name="Spider Climb">
-          can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
-        </traitRef>
-        <trait name="Corrosive Form">
-          A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing damage, the weapon takes a permanent and cumulative −1 penalty to damage rolls. If its penalty drops to −5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage.
-          The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.
-        </trait>
+        <trait id="spider_climb" />
+        <trait id="ooze_cube" />
+        <trait id="transparent" />
       </traits>
       <actions title="Actions" side="back">
         <meleeWeaponAttack name="Pseudopod">
-          +5 to hit, reach 5ft., one target. <i>Hit:</i> 1d6 + 3 bludgeoning damage plus 4d8 acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destoyed if the penalty reduces its AC to 10.
+          +5 to hit, reach 5ft., one target. <i>Hit:</i> 1d6 + 3 bludgeoning damage plus 4d8 acid damage.
         </meleeWeaponAttack>
+        <action name="Engulf">
+          The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature mucst make a DC 15 Dexterity saving throw.<br/>
+          On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.<br/>
+          On a failed save, the cube enters the creature's space, and the creatue takes 4d8 acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 6d6 acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.<br/>
+          An engulfed creature can try to escape by taking an action to make a DC 15 Strength check. On a success, the creature escapes an enters a space of its choice within 5 feet of the cube.
+        </action>
       </actions>
       <actions title="Reactions" side="back">
         <action name="Split">
@@ -350,13 +619,13 @@
           <slashing/>
         </dmgResistance>     
         <dmgImmunity>
-          <poisen/>
+          <poison/>
         </dmgImmunity>
         <condImmunity>
           <exhaustion/>
           <paralyzed/>
           <petrified/>
-          <poisened/>
+          <poisoned/>
           <unconscious/>
         </condImmunity>
         <senses>
@@ -397,7 +666,7 @@
         <abilities str="18" dex="11" con="15" int="14" wis="13" cha="11"/>
         <savingThrows con="0" wis="0" />
         <skills>
-          <skill name="Perception">0</skill>
+          <skill name="Perception"></skill>
         </skills>
         <senses>
           <sense name="darkvision">60 ft</sense>
@@ -443,8 +712,8 @@
         <abilities str="10" dex="14" con="12" int="20" wis="15" cha="16"/>
         <saving int="0" wis="0" />
         <skills>
-          <skill name="Arcana">0</skill>
-          <skill name="History">0</skill>
+          <skill name="Arcana"></skill>
+          <skill name="History"></skill>
         </skills>
         <dmgResistance>
           <from-spells/>
@@ -482,10 +751,29 @@
         
       </description>
     </monster>
-  <monsters>
+  </monsters>
   <traits>
+    <trait id="fey_ancestry" name="Fey Ancestry">
+      The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.
+    </trait>
     <trait id="amorphous" name="Gestaltlos">
       Can move through a space as narrow as 1 inch wide without squeezing.
+    </trait>
+    <trait id="spider_climb" name="Spider climb">
+      can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+    </trait>
+    <trait id="corrosive_form" name="Corrosive Form">
+      A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing damage, the weapon takes a permanent and cumulative −1 penalty to damage rolls. If its penalty drops to −5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage.
+      The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.
+    </trait>
+    <trait id="ooze_cube" name="Ooze Cube">
+      The cube take up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.<br/>
+      A creature inside the cube can be seen but have total cover.<br/>
+      A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a sucessful DC 15 Strength check, and the creature making the attempt takes 4d8 acid damage.<br/>
+      The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.
+    </trait>
+    <trait id="transparent" name="Transparent">
+      Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.
     </trait>
   </traits>
 
