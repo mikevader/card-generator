@@ -210,9 +210,19 @@
         Deine Konstitution ist 19 solange du dieses Amulet trägst. Es hat keinen Effekt, falls deine Konstitution bereits 19 oder höher ist.
       </description>
     </item>
+    <item>
+      <name>Truth Serum</name>
+      <cite>DMH 258</cite>
+      <type>Poison</type>
+      <rarity>uncommon</rarity>
+      <description>
+        <b>(Ingested)</b> A creature subjected to this poison must succeed on a DC 11 Consitution saving throw or become poisoned for 1 hour. The poisoned creature cant't knowingly speak a lie, as if under the effect of a <i>zone of truth</i> spell.
+      </description>
+    </item>
     <!--
     <item>
       <name></name>
+      <cite>DMH </cite>
       <type></type>
       <rarity></rarity>
       <description>

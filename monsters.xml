@@ -79,7 +79,7 @@
         <speed>
           40 ft.
         </speed>
-        <abilities str="8 (-1)" dex="14 (+2)" con="10 (+0)" int="10 (+0)" wis="8 (-1)" cha="8 (-1)"/>
+        <abilities str="8" dex="14" con="10" int="10" wis="8" cha="8"/>
         <skills>
           <skill name="Stealth"></skill>
         </skills>
@@ -710,7 +710,7 @@
           30 ft.
         </speed>
         <abilities str="10" dex="14" con="12" int="20" wis="15" cha="16"/>
-        <saving int="0" wis="0" />
+        <savingThrows int="0" wis="0" />
         <skills>
           <skill name="Arcana"></skill>
           <skill name="History"></skill>
@@ -751,8 +751,68 @@
         
       </description>
     </monster>
+    <monster>
+      <cite></cite>
+      <name>Obgam Sohn des Brogar</name>
+      <type>Humanoid (dwarf)</type>
+      <stats>
+        <proficiency>9</proficiency>
+        <size>Medium</size>
+        <ac>16</ac>
+        <hp>170</hp>
+        <speed>
+          25 ft.
+        </speed>
+        <abilities str="16" dex="9" con="17" int="12" wis="18" cha="7"/>
+        <savingThrows con="0" wis="0" />
+        <skills>
+          <skill name="Deception">5</skill>
+          <skill name="Perception">4</skill>
+        </skills>
+        <dmgResistance>
+          <poison/>
+        </dmgResistance>
+        <condImmunity>
+          <charmed/>
+        </condImmunity>
+        <senses>
+          <sense name="darkvision">120 ft</sense>
+        </senses>
+        <languages>Rogolan, Undercommon</languages>
+        <cr>9 (5'000 XP)</cr>
+      </stats>
+      <traits>
+        <trait id="dwarven_resilience"/>
+        <trait name="Spellcasting">
+          Obgam is a l0th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +7 to hit with s pell attacks). Obgam has the following druid spells prepared:<br/> 
+Cantrips (at will): Shillelagh, Thorn Whip, Frostbite<br/>
+lst level (4 slots): Entangle, Cure Wounds, Healing Word, Faerie Fire, Absorb Elements<br/>
+2nd level (3 slots): Flame Blade, Hold Person, Flaming Sphere<br/>
+3rd level (3 slots): Meld into Stone, Protection from Energy, Erupting Earth<br/>
+4th level (3 slots): Blight, Ice Storm, Stoneskin<br/>
+5th level (2 slots): Conjure Elemental<br/>
+6th level (1 slot): Bones of the Earth
+        </trait>
+      </traits>
+      <actions>
+        <meleeWeaponAttack name="Warhammer">
+          +7 to hit, reach 5ft., one target. <i>Hit:</i> 15 (2d8 + 3) bludgeoning damage.
+        </meleeWeaponAttack>
+      </actions>
+      <description>
+        
+      </description>
+    </monster>
+<!--
+  Drow Elites:
+  - Fehromon Schwarzblatt
+  - Teleria Lotosblick
+-->
   </monsters>
   <traits>
+    <trait id="dwarven_resilience" name="Dwarven Resilience">
+      Dwarves have adv. on saving throws against poison.
+    </trait>
     <trait id="fey_ancestry" name="Fey Ancestry">
       The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.
     </trait>

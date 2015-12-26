@@ -84,6 +84,6 @@
       <div class="title">At higher level</div>
       <div class="value"><xsl:value-of select="." /></div>
     </div>
-  </xsl:stylesheet>
+  </xsl:template>
   
 </xsl:stylesheet>
